@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 
-BASE_URL = os.getenv("BASE_API_URL")
+BASE_URL = "https://api.openf1.org/v1/"
 
 def fetch_data(endpoint, params=None):
 
