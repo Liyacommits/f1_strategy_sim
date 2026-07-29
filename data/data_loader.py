@@ -19,7 +19,7 @@ def fetch_data(endpoint, params=None):
     response.raise_for_status()
     return pd.DataFrame(response.json())
 
-@st.cache
+@st.cache_data
 def fetch_meetings(year, country):
     df = fetch_data("meetings", {"year": year, "country_name": country})
     if df.empty:
@@ -30,7 +30,7 @@ def fetch_meetings(year, country):
     df = df.sort_values(by=['meeting key'], ascending=False)
     return df[['meeting_key', 'label', 'year']].drop_duplicates()
 
-@st.cache
+@st.cache_data
 def fetch_sessions(meeting_key):
     df = fetch_data("sessions", {"meeting_key": meeting_key})
     df['label'] = df['session_name'] + " (" + df['location'] + ")"

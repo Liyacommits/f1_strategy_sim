@@ -45,7 +45,7 @@ with col1:
     filtered_meetings = filtered_meetings.sort_values(by="meeting_key", ascending=False)
 
 with col2:
-    selected_meeting = st.selectbox("Select Grand Prix", filtered_meetings["label"])
+    selected_meeting = st.selectbox("Select Grand Prix", filtered_meetings["label"], disabled=True)
     selected_meeting_key =filtered_meetings.loc[
         filtered_meetings["label"] == selected_meeting, "meeting_key"
     ].values[0]
