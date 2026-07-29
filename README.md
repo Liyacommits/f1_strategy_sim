@@ -1,4 +1,4 @@
-# f1_strategy_sim
+# F1_Strategy_Sim
 
 ## Verification code
 WTC-SNJGGWY4

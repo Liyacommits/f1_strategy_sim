@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 import pandas as pd
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
+# from dotenv import load_dotenv
+# import os
+#
+# load_dotenv()
 
 BASE_URL = "https://api.openf1.org/v1/"
 
