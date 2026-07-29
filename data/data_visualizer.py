@@ -82,11 +82,11 @@ COMPOUND_COLORS = {
 def plot_tire_strategy(stints_df, color_map: dict):
     if stints_df.empty:
         st.warning("No stint data available to plot.")
-        return
+        return None
     
     fig = go.Figure()
 
-    for _, row in stints_df.itterrows():
+    for _, row in stints_df.iterrows():
         compound = row["compound"].upper()
         acronym = row["name_acronym"]
 
@@ -109,32 +109,32 @@ def plot_tire_strategy(stints_df, color_map: dict):
                 )
         )
 
-        y_labels = stints_df["name_acronym"].unique()
-        for acronym in y_labels:
-            fig.add_annotation(
-                x=-3,
-                y=acronym,
-                xref="x",
-                yref="y",
-                text=f"<b>{acronym}</b>",
-                showarrow=False,
-                font=dict(
-                    color=color_map.get(acronym, "#AAA"),
-                    size=12
-                ),
-                align="right",
-            )
-        fig.update_layout(
-            title="Tire Strategy by Driver",
-            xaxis_title="Lap Number",
-            yaxis_title="",
-            barmode="stack",
-            height=600,
-            margin=dict(l=120)
-            
+    y_labels = stints_df["name_acronym"].unique()
+    for acronym in y_labels:
+        fig.add_annotation(
+            x=-3,
+            y=acronym,
+            xref="x",
+            yref="y",
+            text=f"<b>{acronym}</b>",
+            showarrow=False,
+            font=dict(
+                color=color_map.get(acronym, "#AAA"),
+                size=12
+            ),
+            align="right",
         )
+    fig.update_layout(
+        title="Tire Strategy by Driver",
+        xaxis_title="Lap Number",
+        yaxis_title="",
+        barmode="stack",
+        height=600,
+        margin=dict(l=120)
 
-        fig.update_yaxes(showticklabels=False)
+    )
+
+    fig.update_yaxes(showticklabels=False)
     
 
     return fig
