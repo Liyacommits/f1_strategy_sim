@@ -1,15 +1,7 @@
 import pandas as pd
 
 def process_lap_data(df: pd.DataFrame ) -> pd.DataFrame:
-    """
-    Process the lap data DataFrame by performing necessary cleaning and transformations.
 
-    Parameters:
-    df (pd.DataFrame): The input DataFrame containing lap data.
-
-    Returns:
-    pd.DataFrame: The processed DataFrame with cleaned and transformed data.
-    """
     if df.empty:
         return df
 
@@ -48,7 +40,7 @@ def build_driver_color_map(driver_df: pd.DataFrame) -> dict:
     driver_df["driver_number"] = driver_df["driver_number"].astype(str)
 
     color_map = {
-        str(row["name_acronym"]): row['team_colour'] for _, row in driver_df.iterrows()
+        str(row["name_acronym"]): row['team_colour']
         for _, row in driver_df.iterrows()
         if pd.notna(row['team_colour'])
     }
