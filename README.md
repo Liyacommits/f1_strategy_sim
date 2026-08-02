@@ -37,7 +37,7 @@ interactive views:
 
 ```
 f1_strategy_simulator/
-├── app.py                     # Streamlit dashboard (UI + orchestration layer)
+├── main.py                     # Streamlit dashboard (UI + orchestration layer)
 ├── data/
 │   ├── data_loader.py          # Fetches raw data from the OpenF1 API
 │   ├── data_processing.py      # Cleans, sorts, and derives fields from raw data
