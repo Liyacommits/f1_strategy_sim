@@ -100,7 +100,7 @@ dashboards — while indulging a genuine love of F1 and race strategy.
 
 Also, honestly, half of this exists so I can pull up actual lap and pit
 data after a Ferrari race and know whether the strategy really was the
-problem, or whether I just need to stop yelling at Fred and Charles. The
+problem, or whether I just need to stop yelling at Hamilton and Charles. The
 data usually has an answer either way.
 
 
