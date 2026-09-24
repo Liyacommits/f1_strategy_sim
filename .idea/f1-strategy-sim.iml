@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="jdk" jdkName="WSL (Ubuntu): (/home/liyab/Projects/f1_strategy_sim/.venv/bin/python) (2)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="~/Documents/Projects/f1_strategy_sim/.venv" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

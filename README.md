@@ -60,7 +60,7 @@ pit stops, and driver info. No API key required.
 
 ```bash
 pip install -r requirements.txt
-streamlit run app.py
+streamlit run main.py
 ```
 
 Then in the app:
